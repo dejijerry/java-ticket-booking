@@ -1,0 +1,8 @@
+{
+  "/api/events": {
+    "target": "http://host.docker.internal:8080/tickets",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": { "^/api/events": "" }
+  }
+}

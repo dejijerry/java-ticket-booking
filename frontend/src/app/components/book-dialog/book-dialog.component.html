@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Book tickets for {{data.name}}</h2>
+<mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <mat-label>Number of tickets</mat-label>
+    <input matInput type="number" [(ngModel)]="count">
+  </mat-form-field>
+  <div *ngIf="message">{{message}}</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="book()" [disabled]="loading">Book</button>
+</mat-dialog-actions>
